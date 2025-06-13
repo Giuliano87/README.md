@@ -1,0 +1,24 @@
+Bem-vindo ao Sistema de Registro de Transações Bancárias 
+Digite as transações (depósitos como valores positivos, saques como negativos)
+Digite 'fim' para terminar e calcular o saldo
+
+Digite o valor da transação (ex: 100 ou -50): 500
+Transação registrada: 500.00
+Digite o valor da transação (ex: 100 ou -50): -200
+Transação registrada: -200.00
+Digite o valor da transação (ex: 100 ou -50): 100
+Transação registrada: 100.00
+Digite o valor da transação (ex: 100 ou -50): -50
+Transação registrada: -50.00
+Digite o valor da transação (ex: 100 ou -50): fim
+
+===== Relatório de Transações =====
+1. Depósito: R$ 500.00
+2. Saque: R$ 200.00
+3. Depósito: R$ 100.00
+4. Saque: R$ 50.00
+
+===== Saldo Final =====
+Total de transações: 4
+Saldo final da conta: R$ 350.00
+Situação: Saldo positivo
