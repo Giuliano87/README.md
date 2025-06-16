@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Diário de um Dekassegui <span>Notícias </span></a>
+            
+            <div class="menu-toggle">☰</div>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Economia</a></li>
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Tecnologia</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Cabeçalho -->
+    <header class="header">
+        <h1>Últimas Notícias do Momento</h1>
+        <p>Fique por dentro das principais notícias do Japão, Brasil, China, Índia, EUA, Ásia e do mundo</p>
+    </header>
+    
+    <!-- Seção de Destaques -->
+    <section class="destaques">
+        <div class="container">
+            <h2 class="section-title">Destaques</h2>
+            
+            <div class="noticias-grid">
+                <!-- Notícia 1 -->
+                <article class="noticia-card">
+                    <img src="https://via.placeholder.com/400x300" alt="Notícia" class="noticia-img">
+                    <div class="noticia-content">
+                        <span class="noticia-categoria">Política</span>
+                        <h3 class="noticia-titulo">Novas medidas econômicas são anunciadas pelo governo</h3>
+                        <p class="noticia-resumo">O presidente anunciou hoje um pacote de medidas para estimular a economia...</p>
+                        <a href="#" class="leia-mais">Leia mais →</a>
+                    </div>
+                </article>
+                
+                <!-- Notícia 2 -->
+                <article class="noticia-card">
+                    <img src="https://via.placeholder.com/400x300" alt="Notícia" class="noticia-img">
+                    <div class="noticia-content">
+                        <span class="noticia-categoria">Esportes</span>
+                        <h3 class="noticia-titulo">Time local vence campeonato nacional</h3>
+                        <p class="noticia-resumo">Em uma partida emocionante, o time da cidade conquistou o título pela primeira vez...</p>
+                        <a href="#" class="leia-mais">Leia mais →</a>
+                    </div>
+                </article>
+                
+                <!-- Notícia 3 -->
+                <article class="noticia-card">
+                    <img src="https://via.placeholder.com/400x300" alt="Notícia" class="noticia-img">
+                    <div class="noticia-content">
+                        <span class="noticia-categoria">Tecnologia</span>
+                        <h3 class="noticia-titulo">Nova atualização do sistema operacional é lançada</h3>
+                        <p class="noticia-resumo">A empresa anunciou hoje a maior atualização de seu sistema nos últimos anos...</p>
+                        <a href="#" class="leia-mais">Leia mais →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 PortalNews. Todos os direitos reservados.</p>
+            <p>contato@portalnews.com | (11) 1234-5678</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript para o menu mobile -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
