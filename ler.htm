@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ler.css">
+    <link rel="stylesheet" href="tabela.css">
+    <link rel="stylesheet" href="esporte.js">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='white' stroke='black' stroke-width='2'/%3E%3Cpath d='M12 32L32 12L52 32L32 52L12 32Z' fill='white' stroke='black' stroke-width='1.5'/%3E%3Cpath d='M32 18L37 28H47L39 34L44 44L32 38L20 44L25 34L17 28H27L32 18Z' fill='black'/%3E%3C/svg%3E" type="image/svg+xml">
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <img src="favicon.img/favicon/santos-fc-logo-png_seeklogo-457067.png"
+     alt="Escudo do Santos FC" 
+     width="150" 
+     height="150">
+     <title>Santos Futebol Clube</title>
+                
+                <div class="titulos">
+                    <h1><span>SANTOS FUTEBOL CLUBE</span></h1>
+                    <p>Desde 1987 sofrendo com o meu Santos FC. Por Fagner Jacob</p>
+                </div>
+            </div>
+            
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#" class="ativo"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#noticias"><i class="fas fa-newspaper"></i> Notícias</a></li>
+                    <li><a href="#elenco"><i class="fas fa-users"></i> Elenco</a></li>
+                    <li><a href="#jogos"><i class="fas fa-calendar-alt"></i> Jogos</a></li>
+                    <li><a href="#historia"><i class="fas fa-landmark"></i> História</a></li>
+                    <li><a href="#torcida"><i class="fas fa-trophy"></i> Torcida</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner-principal">
+        <div class="container">
+            <div class="banner-conteudo">
+                <span class="destaque">ÚLTIMA NOTÍCIA</span>
+                <h2>Santos vence clássico e sobe na tabela</h2>
+                <p>Time da Vila mostra garra e vence o rival por 2x1 no último domingo</p>
+                <a href="#" class="botao">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notícias -->
+    <section id="noticias" class="secao noticias">
+        <div class="container">
+            <h2 class="titulo-secao"><i class="fas fa-newspaper"></i> Últimas Notícias</h2>
+            
+            <div class="grid-noticias">
+                <!-- Notícia 1 -->
+                <article class="card-noticia">
+                    <div class="card-imagem">
+                        <img src="images/noticias/treino.jpg" alt="Treino do Santos">
+                        <span class="categoria">Treinos</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Time titular define últimos detalhes para o clássico</h3>
+                        <p>Técnico comandou exercícios táticos com provável time que enfrentará o rival no fim de semana</p>
+                        <div class="card-info">
+                            <span><i class="far fa-clock"></i> 2 horas atrás</span>
+                            <a href="#" class="botao-pequeno">Ler mais</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Notícia 2 -->
+                <article class="card-noticia">
+                    <div class="card-imagem">
+                        <img src="images/noticias/jogador.jpg" alt="Novo reforço">
+                        <span class="categoria">Elenco</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Santos apresenta novo reforço para o meio-campo</h3>
+                        <p>Jogador chega por empréstimo e pode estrear já no próximo jogo</p>
+                        <div class="card-info">
+                            <span><i class="far fa-clock"></i> 1 dia atrás</span>
+                            <a href="#" class="botao-pequeno">Ler mais</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Notícia 3 -->
+                <article class="card-noticia">
+                    <div class="card-imagem">
+                        <img src="images/noticias/base.jpg" alt="Categoria de base">
+                        <span class="categoria">Categorias de Base</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Time Sub-20 vence torneio internacional</h3>
+                        <p>Jovens promessas do Peixe brilham em competição na Europa</p>
+                        <div class="card-info">
+                            <span><i class="far fa-clock"></i> 3 dias atrás</span>
+                            <a href="#" class="botao-pequeno">Ler more</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="ver-mais">
+                <a href="#" class="botao">Ver todas as notícias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elenco -->
+    <section id="elenco" class="secao elenco">
+        <div class="container">
+            <h2 class="titulo-secao"><i class="fas fa-users"></i> Elenco Profissional</h2>
+            
+            <div class="filtros-elenco">
+                <button class="filtro-btn ativo" data-posicao="todos">Todos</button>
+                <button class="filtro-btn" data-posicao="goleiros">Goleiros</button>
+                <button class="filtro-btn" data-posicao="defensores">Defensores</button>
+                <button class="filtro-btn" data-posicao="meio-campistas">Meio-Campistas</button>
+                <button class="filtro-btn" data-posicao="atacantes">Atacantes</button>
+            </div>
+            
+              <div class="team-sections">
+            <!-- Goleiros -->
+            <section class="team-section">
+                <h2 class="section-title"><i class="fas fa-tshirt"></i> Goleiros</h2>
+                <div class="players-list">
+                    <div class="player-card goalkeeper">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/joao-paulo-2023-1.png" alt="João Paulo" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">João Paulo</div>
+                            <div class="player-position">Goleiro</div>
+                        </div>
+                        <div class="player-number">1</div>
+                    </div>
+                    
+                    <div class="player-card goalkeeper">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/vladimir-2023-1.png" alt="Vladimir" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Vladimir</div>
+                            <div class="player-position">Goleiro</div>
+                        </div>
+                        <div class="player-number">12</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Defensores -->
+            <section class="team-section">
+                <h2 class="section-title"><i class="fas fa-shield-alt"></i> Defensores</h2>
+                <div class="players-list">
+                    <div class="player-card defender">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/joaquim-2023-1.png" alt="Joaquim" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Joaquim</div>
+                            <div class="player-position">Zagueiro</div>
+                        </div>
+                        <div class="player-number">3</div>
+                    </div>
+                    
+                    <div class="player-card defender">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/messias-2023-1.png" alt="Messias" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Messias</div>
+                            <div class="player-position">Lateral Direito</div>
+                        </div>
+                        <div class="player-number">2</div>
+                    </div>
+                    
+                    <div class="player-card defender">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/lucas-pires-2023-1.png" alt="Lucas Pires" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Lucas Pires</div>
+                            <div class="player-position">Lateral Esquerdo</div>
+                        </div>
+                        <div class="player-number">6</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Meio-campistas -->
+            <section class="team-section">
+                <h2 class="section-title"><i class="fas fa-running"></i> Meio-campistas</h2>
+                <div class="players-list">
+                    <div class="player-card midfielder">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/camacho-2023-1.png" alt="Camacho" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Camacho</div>
+                            <div class="player-position">Volante</div>
+                        </div>
+                        <div class="player-number">5</div>
+                    </div>
+                    
+                    <div class="player-card midfielder">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/dodi-2023-1.png" alt="Dodi" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Dodi</div>
+                            <div class="player-position">Meia</div>
+                        </div>
+                        <div class="player-number">8</div>
+                    </div>
+                    
+                    <div class="player-card midfielder">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/lucas-lima-2023-1.png" alt="Lucas Lima" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Lucas Lima</div>
+                            <div class="player-position">Meia</div>
+                        </div>
+                        <div class="player-number">10</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Atacantes -->
+            <section class="team-section">
+                <h2 class="section-title"><i class="fas fa-futbol"></i> Atacantes</h2>
+                <div class="players-list">
+                    <div class="player-card forward">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/marcos-leonardo-2023-1.png" alt="Marcos Leonardo" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Marcos Leonardo</div>
+                            <div class="player-position">Atacante</div>
+                        </div>
+                        <div class="player-number">9</div>
+                    </div>
+                    
+                    <div class="player-card forward">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/bruno-oliveira-2023-1.png" alt="Bruno Oliveira" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Bruno Oliveira</div>
+                            <div class="player-position">Atacante</div>
+                        </div>
+                        <div class="player-number">11</div>
+                    </div>
+                    
+                    <div class="player-card forward">
+                        <img src="https://www.santosfc.com.br/wp-content/uploads/2023/07/angelo-2023-1.png" alt="Ângelo" class="player-photo">
+                        <div class="player-info">
+                            <div class="player-name">Ângelo</div>
+                            <div class="player-position">Ponta</div>
+                        </div>
+                        <div class="player-number">21</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    </section>
+
+    <!-- Próximos Jogos -->
+    <section id="jogos" class="secao jogos">
+        <div class="container">
+            <h2 class="titulo-secao"><i class="fas fa-calendar-alt"></i> Próximos Jogos</h2>
+            
+            <div class="tabela-jogos">
+                <div class="jogo">
+                    <div class="jogo-data">
+                        <span class="dia">SAB</span>
+                        <span class="data">15/04</span>
+                        <span class="hora">16:00</span>
+                    </div>
+                    <div class="jogo-times">
+                        <div class="time casa">
+                            <img src="images/escudo.png" alt="Santos FC">
+                            <span>SANTOS</span>
+                        </div>
+                        <div class="versus">X</div>
+                        <div class="time visitante">
+                            <img src="images/escudos/corinthians.png" alt="Corinthians">
+                            <span>CORINTHIANS</span>
+                        </div>
+                    </div>
+                    <div class="jogo-info">
+                        <span><i class="fas fa-trophy"></i> Brasileirão Série A</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Vila Belmiro</span>
+                    </div>
+                </div>
+                
+                <!-- Adicione mais jogos -->
+            </div>
+            
+             <div class="container">
+        <div class="header-tabela">
+            <div>
+                <div class="titulo-tabela">CAMPEONATO BRASILEIRO 2025</div>
+                <div class="subtitulo-tabela">SÉRIE A - ATUALIZADO EM 15/12/2025</div>
+            </div>
+            <div style="font-size: 14px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px;">
+                38ª RODADA
+            </div>
+        </div>
+        
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>POS</th>
+                        <th>TIME</th>
+                        <th>PTS</th>
+                        <th>PJ</th>
+                        <th>VIT</th>
+                        <th>E</th>
+                        <th>DER</th>
+                        <th>GP</th>
+                        <th>GC</th>
+                        <th>SG</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Libertadores -->
+                    <tr class="zona-libertadores">
+                        <td class="col-pos">1</td>
+                        <td class="col-time">
+                            <div class="time">
+                                <span>Ilhabela</span>
+                            </div>
+                        </td>
+                        <td class="col-pontos">81</td>
+                        <td>38</td>
+                        <td>25</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>68</td>
+                        <td>32</td>
+                        <td>+36</td>
+                        <td>71</td>
+                    </tr>
+                    
+                    <tr class="zona-libertadores">
+                        <td class="col-pos">2</td>
+                        <td class="col-time">
+                            <div class="time">
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4fR1h7ETyBWqIEZkr3y6yw.png" alt="Palmeiras" class="escudo">
+                                <span>Palmeiras</span>
+                            </div>
+                        </td>
+                        <td class="col-pontos">78</td>
+                        <td>38</td>
+                        <td>24</td>
+                        <td>6</td>
+                        <td>8</td>
+                        <td>62</td>
+                        <td>28</td>
+                        <td>+34</td>
+                        <td>68</td>
+                    </tr>
+                    
+                    <!-- Pré-Libertadores -->
+                    <tr class="zona-pre-libertadores">
+                        <td class="col-pos">7</td>
+                        <td class="col-time">
+                            <div class="time">
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0ZQ1K5D5WQe8z3vP4Quj3Q.png" alt="Atlético-MG" class="escudo">
+                                <span>Atlético-MG</span>
+                            </div>
+                        </td>
+                        <td class="col-pontos">62</td>
+                        <td>38</td>
+                        <td>18</td>
+                        <td>8</td>
+                        <td>12</td>
+                        <td>52</td>
+                        <td>40</td>
+                        <td>+12</td>
+                        <td>54</td>
+                    </tr>
+                    
+                    <!-- Sul-Americana -->
+                    <tr class="zona-sulamericana">
+                        <td class="col-pos">9</td>
+                        <td class="col-time">
+                            <div class="time">
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/1xBWyjjkA6vEWopPK3lIPA.png" alt="Grêmio" class="escudo">
+                                <span>Grêmio</span>
+                            </div>
+                        </td>
+                        <td class="col-pontos">58</td>
+                        <td>38</td>
+                        <td>16</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>48</td>
+                        <td>42</td>
+                        <td>+6</td>
+                        <td>51</td>
+                    </tr>
+                    
+                    <!-- Meio da tabela -->
+                    <tr>
+                        <td class="col-pos">13</td>
+                        <td class="col-time">
+                            <div class="time">
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/7spurne9bjsO5zeloxxWgA.png" alt="São Paulo" class="escudo">
+                                <span>São Paulo</span>
+                            </div>
+                        </td>
+                        <td class="col-pontos">50</td>
+                        <td>38</td>
+                        <td>13</td>
+                        <td>11</td>
+                        <td>14</td>
+                        <td>42</td>
+                        <td>44</td>
+                        <td>-2</td>
+                        <td>44</td>
+                    </tr>
+                    
+                    <!-- Zona de rebaixamento -->
+                    <tr class="zona-rebaixamento">
+                        <td class="col-pos">17</td>
+                        <td class="col-time">
+                            <div class="time">
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/7L3KHyz5K5x8dK5Zxu7JOw.png" alt="Coritiba" class="escudo">
+                                <span>Coritiba</span>
+                            </div>
+                        </td>
+                        <td class="col-pontos">36</td>
+                        <td>38</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>20</td>
+                        <td>32</td>
+                        <td>58</td>
+                        <td>-26</td>
+                        <td>32</td>
+                    </tr>
+                    
+                    <tr class="zona-rebaixamento">
+                        <td class="col-pos">18</td>
+                        <td class="col-time">
+                            <div class="time">
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/3K1Px8vDfWAdxHJm29VWbw.png" alt="América-MG" class="escudo">
+                                <span>América-MG</span>
+                            </div>
+                        </td>
+                        <td class="col-pontos">35</td>
+                        <td>38</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>21</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>-30</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="legenda">
+            <div class="item-legenda">
+                <div class="cor-legenda" style="background-color: #2e7d32;"></div>
+                <span>Libertadores (1º-6º)</span>
+            </div>
+            <div class="item-legenda">
+                <div class="cor-legenda" style="background-color: #1e88e5;"></div>
+                <span>Pré-Libertadores (7º-8º)</span>
+            </div>
+            <div class="item-legenda">
+                <div class="cor-legenda" style="background-color: #ffa000;"></div>
+                <span>Sul-Americana (9º-12º)</span>
+            </div>
+            <div class="item-legenda">
+                <div class="cor-legenda" style="background-color: #c62828;"></div>
+                <span>Rebaixamento (17º-20º)</span>
+            </div>
+        </div>
+    </div>
+            
+    <!-- História -->
+    <section id="historia" class="secao historia">
+        <div class="container">
+            <h2 class="titulo-secao"><i class="fas fa-landmark"></i> Nossa História</h2>
+            
+            <div class="historia-conteudo">
+                <div class="historia-texto">
+                    <p>Fundado em 14 de abril de 1912, o Santos Futebol Clube é um dos clubes mais tradicionais e vitoriosos do futebol brasileiro e mundial.</p>
+                    
+                    <p>Conhecido como "Peixe", o Santos ficou famoso na década de 1960 pela "Era Pelé", quando conquistou inúmeros títulos e encantou o mundo com seu futebol ofensivo e vistoso.</p>
+                    
+                    <p>Alguns dos principais títulos do clube incluem:</p>
+                    
+                    <ul class="titulos-lista">
+                        <li><strong>3x</strong> Campeão da Copa Libertadores da América</li>
+                        <li><strong>2x</strong> Campeão Mundial de Clubes</li>
+                        <li><strong>8x</strong> Campeão Brasileiro</li>
+                        <li><strong>22x</strong> Campeão Paulista</li>
+                    </ul>
+                </div>
+                
+                <div class="historia-imagem">
+                    <img src="images/historia/vila.jpg" alt="Vila Belmiro">
+                    <p class="legenda">Vila Belmiro - O templo sagrado do Peixe</p>
+                </div>
+            </div>
+            
+            <div class="galeria-historia">
+                <h3><i class="fas fa-images"></i> Galeria Histórica</h3>
+                
+                <div class="grid-galeria">
+                    <div class="item-galeria">
+                        <img src="images/historia/pelé.jpg" alt="Pelé no Santos">
+                        <p>Pelé - O Rei do Futebol</p>
+                    </div>
+                    <div class="item-galeria">
+                        <img src="images/historia/libertadores.jpg" alt="Título da Libertadores">
+                        <p>Conquista da Libertadores 2011</p>
+                    </div>
+                    <!-- Adicione mais itens -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Torcida -->
+    <section id="torcida" class="secao torcida">
+        <div class="container">
+            <h2 class="titulo-secao"><i class="fas fa-trophy"></i> Torcida</h2>
+            
+            <div class="torcida-conteudo">
+                <div class="torcida-info">
+                    <h3>Seja Sócio-Torcedor</h3>
+                    <p>Faça parte da família santista e tenha benefícios exclusivos!</p>
+                    <ul class="beneficios">
+                        <li><i class="fas fa-check"></i> Descontos em ingressos</li>
+                        <li><i class="fas fa-check"></i> Acesso a conteúdos exclusivos</li>
+                        <li><i class="fas fa-check"></i> Descontos na loja oficial</li>
+                        <li><i class="fas fa-check"></i> Brindes exclusivos</li>
+                    </ul>
+                    <a href="#" class="botao">Associe-se Já</a>
+                </div>
+                
+                <div class="torcida-form">
+                    <h3>Receba Notícias</h3>
+                    <p>Cadastre-se para receber as últimas notícias do Peixe</p>
+                    <form>
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit" class="botao">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-colunas">
+                <div class="coluna">
+                    <img src="favicon.img/favicon/santos-fc-logo-png_seeklogo-457067.png" alt="Escudo Santos FC" class="escudo-rodape">
+                    <p>SANTOS FUTEBOL CLUBE</p>
+                    <p>Rua Princesa Isabel, 77 - Vila Belmiro</p>
+                    <p>Santos/SP - CEP 11075-500</p>
+                </div>
+                
+                <div class="coluna">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Ingressos</a></li>
+                        <li><a href="#">Loja Oficial</a></li>
+                        <li><a href="#">Futebol Feminino</a></li>
+                        <li><a href="#">Categorias de Base</a></li>
+                    </ul>
+                </div>
+                
+       
+            
+            <div class="social-media">
+
+            </div>
+
+
+            <div class="social-icons">
+        <a href="#" class="social-icon facebook" aria-label="Facebook">f</a>
+        <a href="#" class="social-icon twitter" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-icon instagram" aria-label="Instagram">📷</a>
+        <a href="#" class="social-icon linkedin" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-icon youtube" aria-label="YouTube">▶</a>
+    </div>
+        </div>
+            
+            <div class="copyright">
+    <p class="copyright">&copy; 2023 Sua Empresa. Todos os direitos reservados.</p>
+    <p class="desenvolvedor">Desenvolvido por <a href="#">Sua Empresa</a></p>
+</footer>
+
+
+</head>
+</body>
+    
+    
+    

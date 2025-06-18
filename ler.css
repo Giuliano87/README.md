@@ -1,0 +1,1139 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #eceaea;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cores do Santos FC */
+:root {
+    --preto: #0c0000;
+    --branco: #f7f1f1;
+    --dourado: #e7e710;
+    --vermelho: #d1db0b;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.escudo {
+    width: 60px;
+    height: 60px;
+}
+
+.titulos h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.titulos h1 span {
+    color: var(--dourado);
+}
+
+.titulos p {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Menu Principal */
+.menu-principal ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-principal a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.menu-principal a:hover, .menu-principal a.ativo {
+    color: var(--dourado);
+}
+
+.menu-principal i {
+    font-size: 1.1rem;
+}
+
+.menu-mobile {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--branco);
+}
+
+/* Banner Principal */
+.banner-principal {
+    background: linear-gradient(rgba(246, 244, 244, 0.7), rgba(0,0,0,0.7)), url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+}
+
+.banner-conteudo {
+    max-width: 600px;
+}
+
+.destaque {
+    display: inline-block;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 0.3rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.banner-conteudo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.banner-conteudo p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Botões */
+.botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.botao:hover {
+    background-color: #c0102d;
+    transform: translateY(-2px);
+}
+
+.botao i {
+    font-size: 0.8rem;
+}
+
+.botao-pequeno {
+    display: inline-block;
+    color: var(--vermelho);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.botao-pequeno:hover {
+    border-color: var(--vermelho);
+}
+
+/* Seções */
+.secao {
+    padding: 4rem 0;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-transform: uppercase;
+}
+
+.titulo-secao i {
+    color: var(--vermelho);
+}
+
+/* Grid de Notícias */
+.grid-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card-noticia {
+    background-color: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.card-noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-imagem {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card-noticia:hover .card-imagem img {
+    transform: scale(1.1);
+}
+
+.card-imagem .categoria {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card-conteudo {
+    padding: 1.5rem;
+}
+
+.card-conteudo h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--preto);
+}
+
+.card-conteudo p {
+    color: #666;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.card-info i {
+    margin-right: 0.3rem;
+    color: var(--vermelho);
+}
+
+.ver-mais {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Elenco */
+.filtros-elenco {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    background: #ddd;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.filtro-btn.ativo {
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.grid-elenco {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card-jogador {
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.card-jogador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.jogador-imagem {
+    height: 250px;
+    overflow: hidden;
+}
+
+.jogador-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jogador-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.jogador-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--preto);
+}
+
+.posicao {
+    color: var(--vermelho);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.numero {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: var(--preto);
+    color: var(--branco);
+    border-radius: 50%;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.jogador-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.jogador-stats strong {
+    color: var(--preto);
+}
+
+/* Jogos */
+.tabela-jogos {
+    margin-bottom: 3rem;
+}
+
+.jogo {
+    background: var(--branco);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jogo-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.dia {
+    font-weight: 600;
+    color: var(--vermelho);
+    text-transform: uppercase;
+}
+
+.data {
+    font-weight: 600;
+    margin: 0.3rem 0;
+}
+
+.hora {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.jogo-times {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    margin: 0 2rem;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.time.casa {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.time.visitante {
+    text-align: left;
+}
+
+.time img {
+    width: 40px;
+    height: 40px;
+}
+
+.versus {
+    font-weight: 700;
+    color: var(--vermelho);
+    font-size: 1.2rem;
+}
+
+.jogo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
+    text-align: right;
+}
+
+.jogo-info i {
+    color: var(--vermelho);
+    margin-right: 0.5rem;
+}
+
+/* Tabela de Classificação */
+.tabela-classificacao {
+    background: var(--branco);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tabela-classificacao h3 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--preto);
+}
+
+.tabela-classificacao h3 i {
+    color: var(--vermelho);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 0.8rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
+tr.destaque {
+    background: rgba(227, 25, 55, 0.1);
+    font-weight: 600;
+}
+
+.time-tabela {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.time-tabela img {
+    width: 25px;
+    height: 25px;
+}
+
+/* História */
+.historia-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.historia-texto p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.titulos-lista {
+    margin-top: 2rem;
+}
+
+.titulos-lista li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.titulos-lista strong {
+    color: var(--vermelho);
+    font-size: 1.1rem;
+}
+
+.historia-imagem img {
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.legenda {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Galeria Histórica */
+.galeria-historia {
+    margin-top: 3rem;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.item-galeria {
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.05);
+}
+
+.item-galeria p {
+    padding: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--preto);
+}
+
+/* Torcida */
+.torcida-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: var(--branco);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.torcida-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--preto);
+}
+
+.torcida-info p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.beneficios {
+    margin: 2rem 0;
+}
+
+.beneficios li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.beneficios i {
+    color: var(--vermelho);
+}
+
+.torcida-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--preto);
+}
+
+.torcida-form p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--vermelho);
+}
+
+/* Rodapé */
+.rodape {
+    background: black;
+    color: var(--branco);
+    padding: 3rem 0 0;
+}
+
+.rodape-colunas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.escudo-rodape {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.rodape p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #0a0a0a;
+}
+
+.rodape h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.rodape ul li {
+    margin-bottom: 0.8rem;
+}
+
+.rodape ul li a:hover {
+    color: var(--dourado);
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.redes-sociais a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    border-radius: 50%;
+    color: black;
+    transition: all 0.3s;
+}
+
+.redes-sociais a:hover {
+    background: var(--vermelho);
+    transform: translateY(-3px);
+}
+
+.patrocinadores-titulo {
+    margin-top: 2rem;
+}
+
+.patrocinadores {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.patrocinadores img {
+    height: 40px;
+    width: auto;
+    filter: grayscale(100%) brightness(200%);
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.patrocinadores img:hover {
+    filter: none;
+    opacity: 1;
+}
+
+.rodape-inferior {
+    border-top: 1px solid #333;
+    padding-top: 2rem; 
+    margin-top: 2rem;
+}
+
+path { transition: fill 0.3s; }
+svg:hover path { fill: #FF0000; } /* Efeito hover */
+
+/* Estilos gerais da tabela */
+.tabela-brasileirao {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-brasileirao th {
+    background-color: #000604; /* Verde do Brasileirão */
+    color: white;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tabela-brasileirao td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabela-brasileirao tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estilo para a coluna de posição */
+.tabela-brasileirao .posicao {
+    font-weight: bold;
+    width: 40px;
+}
+
+/* Estilo para a coluna do time */
+.tabela-brasileirao .time {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 180px;
+}
+
+.tabela-brasileirao .escudo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Zona de classificação para Libertadores (1º a 6º) */
+.tabela-brasileirao .libertadores {
+    background-color: #e8f5e9; /* Verde muito claro */
+    position: relative;
+}
+
+.tabela-brasileirao .libertadores::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #2e7d32; /* Verde escuro */
+}
+
+/* Zona de Pré-Libertadores (7º e 8º) */
+.tabela-brasileirao .pre-libertadores {
+    background-color: #e3f2fd; /* Azul claro */
+    position: relative;
+}
+
+.tabela-brasileirao .pre-libertadores::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #1565c0; /* Azul escuro */
+}
+
+/* Zona de Sul-Americana (9º a 12º) */
+.tabela-brasileirao .sul-americana {
+    background-color: #fff8e1; /* Amarelo claro */
+    position: relative;
+}
+
+.tabela-brasileirao .sul-americana::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ff8f00; /* Laranja */
+}
+
+/* Zona de Rebaixamento (17º a 20º) */
+.tabela-brasileirao .rebaixamento {
+    background-color: #ffebee; /* Vermelho claro */
+    position: relative;
+}
+
+.tabela-brasileirao .rebaixamento::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #c62828; /* Vermelho escuro */
+}
+
+/* Destaque para os pontos */
+.tabela-brasileirao .pontos {
+    font-weight: bold;
+    color: #006b3d; /* Verde do Brasileirão */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tabela-brasileirao {
+        font-size: 14px;
+    }
+    
+    .tabela-brasileirao th, 
+    .tabela-brasileirao td {
+        padding: 8px 4px;
+    }
+    
+    .tabela-brasileirao .time {
+        min-width: 120px;
+    }
+    
+    .tabela-brasileirao .escudo {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+         .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Ícones usando pseudo-elementos */
+        .facebook::before { content: ""; }
+        .twitter::before { content: ""; }
+        .instagram::before { content: ""; }
+        .linkedin::before { content: ""; }
+        .youtube::before { content: ""; }
+
+        
+        .facebook { background-color: #3b5998; font-family: Arial; font-weight: bold; }
+        .twitter { background-color: #ebeb13; }
+        .instagram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+        .linkedin { background-color: #0077b5; font-family: Arial; font-weight: bold; }
+        .youtube { background-color: #ff0000; }
+        
+        /* Conteúdo do rodapé */
+
+        
+        /* COPYRIGHT */
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: rgba(220, 210, 210, 0.7);
+        }
+
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #000000, #333);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Lista de Jogadores */
+        .team-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .team-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 100%;
+            max-width: 550px;
+        }
+        
+        .section-title {
+            color: #000;
+            border-bottom: 2px solid #f5f5f5;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            color: #000;
+        }
+        
+        .players-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 15px;
+        }
+        
+        .player-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        .player-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        
+        .player-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f5f5f5;
+        }
+        
+        .player-info {
+            flex: 1;
+        }
+        
+        .player-name {
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 3px;
+        }
+        
+        .player-position {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .player-number {
+            font-weight: bold;
+            color: #000;
+            background-color: #f5f5f5;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .players-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .player-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .player-info {
+                width: 100%;
+            }
+        }
+        
+        /* Cores por posição */
+        .goalkeeper { border-left: 4px solid #3498db; }
+        .defender { border-left: 4px solid #2ecc71; }
+        .midfielder { border-left: 4px solid #f39c12; }
+        .forward { border-left: 4px solid #e74c3c; }
